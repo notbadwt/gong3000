@@ -42,7 +42,7 @@ public class DataConfig {
     public EntityManagerFactory entityManagerFactory(DataSource dataSource) {
         LocalContainerEntityManagerFactoryBean entityManager = new LocalContainerEntityManagerFactoryBean();
         entityManager.setDataSource(dataSource);
-        entityManager.setPackagesToScan("com.gong3000.**.repository");
+        entityManager.setPackagesToScan("com.gong3000");
         //@TODO 临时
 //        Properties properties = new Properties();
 //        properties.setProperty("hibernate.hbm2ddl.auto", "update");
