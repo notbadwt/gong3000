@@ -1,6 +1,7 @@
 package com.gong3000;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -15,8 +16,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @EnableDiscoveryClient
 @ComponentScan(basePackages = {"com.gong3000.user", "com.gong3000.config"})
-@EnableJpaRepositories(basePackages = {"com.gong3000"})
+@EnableJpaRepositories(basePackages = {"com.gong3000.user.repository"})
 @SpringBootApplication
+@EnableAutoConfiguration
 public class UserServiceApplication {
 
     public static void main(String[] args) {
